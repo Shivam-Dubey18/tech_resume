@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px; /* Restrict the max width for larger screens */
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em; /* Reduce font size slightly for better scaling */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #000;
+    margin: 10px 0;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+/* Flex and Responsive Layout */
+.experience, .projects, .education {
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    gap: 10px; /* Add spacing between elements when wrapped */
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to stack on smaller screens */
+    gap: 10px;
+}
+
+.columns li {
+    flex: 1 1 45%; /* Adjust flex basis for smaller screen widths */
+}
+
+/* Education Section */
+.degree {
+    font-size: 1em;
+    margin: 5px 0px;
+}
+
+p.projects {
+    margin: 0px 0px;
+}
+
+.competition {
+    font-size: 1em;
+    margin: 0px 0px;
+}
+
+.position {
+    font-size: 0.9em;
+    margin: 5px 0px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .experience, .projects, .education {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 0.8em;
+    }
+
+    .container {
+        width: 100%; /* Utilize full width on very small screens */
+        padding: 10px;
+    }
+
+    .columns li {
+        flex: 1 1 100%; /* Stack list items fully */
+    }
+}
